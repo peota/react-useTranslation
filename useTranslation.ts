@@ -10,6 +10,9 @@ const useTranslation = (): UseTranslationReturn => {
     const [language, setLang] = useState<string>("en-US");
 
     const t = (key: string): string => {
+        if (!translations[language]) {
+            return key;
+        }
         const path = key.split('.'); // Split the key by '.' to get the path
         let current = translations[language];
 
