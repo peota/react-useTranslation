@@ -1,0 +1,10 @@
+{
+    "hello": "Hello",
+    "settings" : {
+        "title": "Settings",
+        "language": "Language",
+        "theme": "Theme",
+        "dark": "Dark",
+        "light": "Light"
+    }
+}
