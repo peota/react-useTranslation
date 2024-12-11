@@ -34,7 +34,9 @@ const loadTranslations = async (lang: string): Promise<Translations> => {
 const TranslationProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [language, setLang] = useState<string>(DEFAULT_LANGUAGE);
+  const [language, setLang] = useState<string>(
+    () => localStorage.getItem("lang") || DEFAULT_LANGUAGE
+  );
   const [translations, setTranslations] = useState<Translations>({});
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
